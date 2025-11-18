@@ -1,0 +1,190 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  width: 780px;
+  height: 480px;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* LEFT SECTION */
+/* LEFT SECTION */
+.left-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c1576a;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: #fff;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.info-box {
+  max-width: 320px;
+}
+
+.info-box .bx {
+  font-size: 70px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.info-box h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.info-box h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fbe9ec;
+  margin-bottom: 12px;
+}
+
+.info-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fceef1;
+  font-weight: 300;
+}
+
+/* RIGHT SECTION */
+.right-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 280px;
+  text-align: left;
+}
+
+.logo-top {
+  width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.login-box h1 {
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  font-weight: 600;
+  color: #c1576a;
+}
+
+.login-box h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #222;
+  font-weight: 600;
+}
+
+.login-box p {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+/* FORM STYLING */
+.form-group {
+  margin-bottom: 18px;
+  position: relative; /* for icon positioning */
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Input fields with left icons */
+input {
+  width: 100%;
+  padding: 8px 10px 8px 35px; /* left padding for icon */
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  font-size: 13px;
+  outline: none;
+}
+
+.form-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #c1576a;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #c1576a;
+  box-shadow: 0 0 5px rgba(193, 87, 106, 0.4);
+}
+
+/* Forgot password link */
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #1f4ed8;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.btn {
+  width: 100%;
+  padding: 8px;
+  background: #c1576a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #a83e51;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  margin-top: 12px;
+}
+
+.signup-text a {
+  color: #1f4ed8;
+  text-decoration: none;
+  font-weight: 500;
+}

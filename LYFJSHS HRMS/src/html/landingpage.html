@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Record Management System</title>
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/landingpage.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <nav class="nav-bd-grid">
+        <div>
+          <a href="#" class="nav_logo">LYFJSHS</a>
+          <p style="font-size: small">
+            Health Record Management System
+          </p>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-dots-horizontal-rounded"></i>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__close" id="nav-close"><i class="bx bx-x"></i></div>
+
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav_link">Home</a></li>
+            <li class="nav__item">
+              <a href="#about" class="nav_link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#features" class="nav_link">Features</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html" class="nav_link">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="home section" id="home">
+      <div class="home__container">
+        <div class="home__content">
+          <h1 class="home__title">LYFJSHS Health Record Management System</h1>
+          <p class="home__description">
+            Manage student health records easily and securely.
+          </p>
+          <a href="login.html" class="button">Admin Login</a>
+        </div>
+        <img
+          src="imgs/b51e5fa8f3941aba3009c7831cd41533-removebg-preview.png"
+          alt="Health"
+        />
+        <div class="home__img"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="about__container">
+        <img
+          src="imgs/441d62de48586b5f759a75be6418e600-removebg-preview.png"
+          alt="About"
+          class="about__img"
+        />
+        <div class="about__data">
+          <h2 class="section__title">About HRMS</h2>
+          <p>
+            Our system simplifies the management of student health records,
+            ensuring accuracy, privacy, and quick access to medical information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section" id="features">
+      <h2 class="section__title">Features</h2>
+      <div class="features__container">
+        <div class="feature__card">
+          <i class="bx bx-lock"></i>
+          <h3>Secure Data</h3>
+          <p>All users information is encrypted and safely stored.</p>
+        </div>
+        <div class="feature__card">
+          <i class="bx bx-user"></i>
+          <h3>Easy Access</h3>
+          <p>Authorized personnel can quickly access and update records.</p>
+        </div>
+        <div class="feature__card">
+          <i class="bx bx-analyse"></i>
+          <h3>Analytics</h3>
+          <p>Monitor health trends and generate reports with one click.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; Health Record Management System</p>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.from(".home__title", { opacity: 0, y: 40, duration: 1 });
+      gsap.from(".home__description", {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        delay: 0.3,
+      });
+      gsap.from(".button", { opacity: 0, scale: 0.8, duration: 1, delay: 0.6 });
+    </script>
+  </body>
+</html>

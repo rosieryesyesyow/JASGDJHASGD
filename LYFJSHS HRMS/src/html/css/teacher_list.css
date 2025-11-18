@@ -1,0 +1,136 @@
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f6fa;
+    color: #333;
+  }
+  
+  /* ===== Container ===== */
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* ===== Main Content ===== */
+  .main-content h2 {
+    margin-bottom: 20px;
+    color: #2f3640;
+  }
+  
+  /* ===== Table Styling ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #c1576a;
+    color: #fff;
+  }
+  
+  thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+  }
+  
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f2f6;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f2f6;
+  }
+  
+  /* ===== Action Buttons ===== */
+  button.btn-small {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  
+  button.btn-small {
+    background-color: #a83e51;
+  }
+  
+  button.edit:hover {
+    background-color: #c1576a;
+  }
+  
+  button.delete {
+    background-color: #e84118;
+  }
+  
+  button.delete:hover {
+    background-color: #c23616;
+  }
+  
+  /* ===== Back Button ===== */
+  button.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #a83e51;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button.btn:hover {
+    background-color: #c1576a;
+  }
+  
+  /* ===== Responsive ===== */
+  @media screen and (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+  
+    thead tr {
+      display: none;
+    }
+  
+    tbody tr {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #fff;
+    }
+  
+    tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border-bottom: 0;
+    }
+  
+    tbody td::before {
+      content: attr(data-label);
+      font-weight: bold;
+    }
+  }
+  

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Health Management SPA</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <style>
+      section {
+        display: none;
+      }
+      section.active {
+        display: block;
+      }
+      .cards-grid {
+        display: flex;
+        gap: 1rem;
+      }
+      .card {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .btn-small {
+        padding: 0.2rem 0.5rem;
+        margin-right: 0.3rem;
+      }
+      .btn-danger {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>Student Health Record<br /><span>Management System</span></h1>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <button onclick="goTo('dashboard')" class="active">
+                Dashboard
+              </button>
+            </li>
+            <li><button onclick="goTo('add-student')">Add Student</button></li>
+            <li>
+              <button onclick="goTo('student-list')">Student List</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-bottom">
+          <button onclick="logout()">Log Out</button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- DASHBOARD -->
+        <section id="dashboard-page" class="active">
+          <header class="header">
+            <h2>Dashboard</h2>
+            <div class="datetime" id="datetime">Loading...</div>
+          </header>
+          <main class="dashboard-content">
+            <div id="stats" class="cards-grid"></div>
+          </main>
+        </section>
+
+        <!-- ADD STUDENT -->
+        <section id="add-student-page">
+          <h2>Add New Student</h2>
+          <form id="addStudentForm">
+            <input
+              type="text"
+              id="studentLRN"
+              placeholder="Student LRN"
+              required
+            />
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="text" id="class" placeholder="Class/Grade" required />
+            <input type="date" id="dob" required />
+            <input type="text" id="address" placeholder="Address" />
+            <input
+              type="text"
+              id="parentContact"
+              placeholder="Parent/Guardian Name"
+              required
+            />
+            <input
+              type="text"
+              id="emergencyContact"
+              placeholder="Emergency Contact"
+            />
+            <input type="text" id="height" placeholder="Height" />
+            <input type="text" id="weight" placeholder="Weight" />
+            <input type="text" id="blood" placeholder="Blood Type" />
+            <input
+              type="text"
+              id="pastIllnesses"
+              placeholder="Past Illnesses"
+            />
+            <input type="text" id="allergies" placeholder="Allergies" />
+            <input
+              type="text"
+              id="conditions"
+              placeholder="Pre-existing Conditions"
+            />
+            <input
+              type="text"
+              id="vaccination"
+              placeholder="Vaccination Status"
+            />
+            <button type="submit" class="btn">Save Student</button>
+          </form>
+        </section>
+
+        <!-- STUDENT LIST -->
+        <section id="student-list-page">
+          <h2>Student List</h2>
+          <table border="1" id="studentTable">
+            <thead>
+              <tr>
+                <th>LRN</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <!-- VIEW STUDENT HEALTH -->
+        <section id="student-health-page">
+          <h2>Student Health Record</h2>
+          <div id="healthDetails"></div>
+        </section>
+      </div>
+    </div>
+
+    <script src="sample.js"></script>
+  </body>
+</html>

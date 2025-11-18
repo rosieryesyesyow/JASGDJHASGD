@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Student Health Record Management System</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Left section -->
+    <div class="left-section">
+      <div class="doctor-image"></div>
+      <div class="info-box">
+        <div class="info-content">
+          <img src="imgs/577258389_819623970710259_5288846695784598957_n-removebg-preview.png" alt="Luis Logo" class="logo" />
+          <h2>Join <span>LYFJSHS</span></h2>
+          <h3>Student Health Record Management System</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right section -->
+    <div class="right-section">
+      <div class="login-box">
+        <img src="imgs/577258389_819623970710259_5288846695784598957_n-removebg-preview.png" alt="Luis Logo" class="logo-top" />
+        <h1>LYFJSHS</h1>
+        <h3>Create Account</h3>
+        <p>Register to get started</p>
+
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required />
+          </div>
+
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="signup-text">Already have an account? <a href="login.html">Sign in</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Health Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="left-section">
+      <div class="doctor-image"></div>
+      <div class="info-box">
+        <div class="info-content">
+          <img src="imgs/logo.png" alt="Logo" class="logo">
+          <h2>Welcome to <span>HealthCare+</span></h2>
+          <h3>Student Health Record Management System</h3>
+          <p>Securely manage student medical data, appointments, and reports in one place.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="login-box">
+        <img src="imgs/logo.png" alt="Logo" class="logo-top">
+        <h1>HealthCare+</h1>
+        <h3>Login to your account</h3>
+        <p>Enter your credentials to access the dashboard.</p>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Email address</label>
+            <input type="text" id="username" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <a href="#" class="forgot">Forgot password?</a>
+          <button type="submit" class="btn">Login</button>
+
+          <div class="signup-text">
+            Don't have an account? <a href="#" id="signupLink">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Management System</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <style>
+    /* Basic Modal Styling */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 25px;
+      width: 400px;
+      text-align: left;
+      position: relative;
+    }
+
+    .modal-content h2 {
+      color: #1f4ed8;
+      margin-bottom: 15px;
+    }
+
+    .modal-content label {
+      display: block;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .modal-content input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .modal-content button {
+      background: #1f4ed8;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .close-btn:hover { color: #000; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="imgs/logo2.jpg" alt="Logo" class="sidebar-logo" />
+        <h1>Student Health Record <span class="highlight">System</span></h1>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><button id="btnDashboard" class="active">🏠 Dashboard</button></li>
+          <li><button id="btnUsers">👥 Users</button></li>
+          <li><button id="btnScheduling">🗓️ Scheduling</button></li>
+          <li><button id="btnHealthRecords">📋 Health Records</button></li>
+          <li><button id="btnReports">📈 Reports</button></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <ul>
+          <li><button id="btnSettings">⚙️ Settings</button></li>
+          <li><button id="logoutBtn">🚪 Log Out</button></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <header class="header">
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="header-right">
+          <div id="datetime"></div>
+        </div>
+      </header>
+
+      <main class="dashboard-content" id="mainContent">
+        <h1>Dashboard</h1>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Your Patients</h3>
+            <button class="card-button" id="btnAddUser">Add New User</button>
+          </div>
+
+          <div class="card">
+            <h3>Doctors</h3>
+            <button class="card-button" id="btnAddDoctor">Add New Doctor</button>
+          </div>
+
+          <div class="card">
+            <h3>Nurses</h3>
+            <button class="card-button" id="btnAddNurse">Add New Nurse</button>
+          </div>
+
+          <div class="card">
+            <h3>Health Reports</h3>
+            <button class="card-button" id="btnViewReports">View/Add Report</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- MODALS -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2 id="modalTitle">Add User</h2>
+      <form id="modalForm">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter name" required />
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter email" required />
+        <label>Role</label>
+        <input type="text" id="role" placeholder="Enter role (Doctor, Nurse, etc.)" required />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

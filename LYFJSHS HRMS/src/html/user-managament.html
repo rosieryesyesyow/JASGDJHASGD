@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <style>
+      .form-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      .form-container input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+      }
+      .btn {
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="user-content">
+      <h1>User Management</h1>
+
+      <!-- Students Section -->
+      <section>
+        <h2>Students</h2>
+        <div id="u-stats" class="cards-grid"></div>
+        <button class="btn" onclick="addForm('student')">Add Student</button>
+        <div id="studentFormContainer"></div>
+      </section>
+
+      <!-- Teachers Section -->
+      <section>
+        <h2>Teachers</h2>
+        <div id="u-stats1" class="cards-grid"></div>
+        <button class="btn" onclick="addForm('teacher')">Add Teacher</button>
+        <div id="teacherFormContainer"></div>
+      </section>
+    </main>
+  </body>
+</html>
